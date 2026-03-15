@@ -9,6 +9,8 @@ Important:
 - Do not provide legal advice.
 - Do not predict outcomes.
 - Do not act like an accredited representative.
+- Do not include internal rule IDs (for example RULE_IC_001) in user-facing text fields.
+- Put official source links only in citations; keep prose readable and plain-language.
 
 Your output must:
 - explain why the selected route fits

@@ -35,6 +35,65 @@
   line-height: 1.7;
 }
 
+.route-pill {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.result-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  background: var(--surface, #fff);
+}
+
+.result-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.result-card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.result-details {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 12px;
+  padding: 8px 12px;
+}
+
+.result-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.result-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.result-details > summary::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.15s ease;
+}
+
+.result-details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.result-details h4 {
+  margin-bottom: 6px;
+}
+
 .results-sidebar {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -64,6 +123,15 @@
 
 .results-sidebar a:hover {
   text-decoration: underline;
+}
+
+.source-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.sidebar-details {
+  margin-top: 14px;
 }
 
 .export-panel {

@@ -1,4 +1,5 @@
 import json
+import re
 from typing import Dict, Any, List
 from backend.models.session import SessionState, AnalyzeResponse, FinalPacket
 from backend.services.router_service import classify_route_free_text
@@ -123,6 +124,41 @@ def _mentions_board_lane_details(text: str) -> bool:
 def _load_prompt(filename: str) -> str:
     from pathlib import Path
     return (Path(__file__).resolve().parents[1] / "prompts" / filename).read_text(encoding="utf-8")
+
+
+def _strip_internal_rule_refs(text: str) -> str:
+    """
+    Remove internal rule IDs (e.g., RULE_IC_001) from user-facing prose.
+    """
+    if not isinstance(text, str):
+        return text
+    cleaned = re.sub(r"\(\s*RULE_[A-Z0-9_]+\s*\)", "", text)
+    cleaned = re.sub(r"\bRULE_[A-Z0-9_]+\b", "", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip()
+    cleaned = re.sub(r"\s+([,.;:])", r"\1", cleaned)
+    return cleaned
+
+
+def _clean_user_facing_packet_text(packet_dict: Dict[str, Any]) -> Dict[str, Any]:
+    for key in [
+        "why_this_path",
+        "why_not_other_paths",
+        "possible_missing_evidence",
+        "warnings",
+        "follow_up_questions",
+        "possible_forms",
+    ]:
+        values = packet_dict.get(key, [])
+        if isinstance(values, list):
+            cleaned_values = []
+            for value in values:
+                text = _strip_internal_rule_refs(str(value))
+                if text:
+                    cleaned_values.append(text)
+            packet_dict[key] = cleaned_values
+    if isinstance(packet_dict.get("safety_note"), str):
+        packet_dict["safety_note"] = _strip_internal_rule_refs(packet_dict["safety_note"])
+    return packet_dict
 
 def _enforce_route_precedence(route: str, full_text: str, known_facts: Dict[str, Any]) -> str:
     """
@@ -505,6 +541,9 @@ def analyze_session(state: SessionState) -> AnalyzeResponse:
             values = ex_data.get(key, [])
             if isinstance(values, list):
                 ex_data[key] = [v for v in values if not _mentions_board_lane_details(str(v))]
+
+    # Remove internal rule IDs from user-facing prose.
+    ex_data = _clean_user_facing_packet_text(ex_data)
     
     # NEW: Final packet validation logic
     ex_data = _final_packet_consistency_check(ex_data, route, known_facts, full_text)

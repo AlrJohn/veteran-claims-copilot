@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { SessionState, AnalyzeResponse } from '../App'
 import { analyzeSession } from '../lib/api'
+import './FollowUpPage.css'
+import './IntakePage.css'
 
 interface FollowUpPageProps {
   sessionState: SessionState
@@ -51,8 +53,8 @@ export function FollowUpPage({ sessionState, analyzeResponse, onBack, onAnalyzeS
   }
 
   return (
-    <main className="intake">
-      <header className="intake-header">
+    <main className="follow-up">
+      <header className="follow-up-header">
         <button type="button" className="link-button" onClick={onBack}>
           ← Back
         </button>
@@ -62,15 +64,14 @@ export function FollowUpPage({ sessionState, analyzeResponse, onBack, onAnalyzeS
 
       <section className="intake-grid" style={{ gridTemplateColumns: 'minmax(0, 1fr)' }}>
         <div className="intake-main">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="follow-up-form">
             {questions.map((q, idx) => (
-              <div key={idx} style={{ marginBottom: '1.5rem' }}>
-                <label className="field-label" style={{ fontWeight: 600 }}>{q}</label>
+              <div key={idx} className="follow-up-question">
+                <label className="field-label">{q}</label>
                 <input
                   type="text"
                   value={answers[idx] || ''}
                   onChange={(e) => setAnswers({ ...answers, [idx]: e.target.value })}
-                  style={{ width: '100%', padding: '0.5rem', marginTop: '0.25rem' }}
                 />
               </div>
             ))}

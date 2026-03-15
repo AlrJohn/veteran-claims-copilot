@@ -1,0 +1,33 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 52px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+
+.app-header-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-h);
+  letter-spacing: 0.01em;
+}
+
+.app-header-badge {
+  font-size: 0.78rem;
+  color: var(--text);
+  opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 0 16px;
+  }
+
+  .app-header-badge {
+    display: none;
+  }
+}

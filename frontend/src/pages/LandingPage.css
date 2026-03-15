@@ -1,18 +1,22 @@
 .landing {
   max-width: 960px;
   margin: 0 auto;
-  padding: 32px 16px 48px;
+  padding: 40px 24px 56px;
   text-align: left;
 }
 
 .landing-header h1 {
-  font-size: 2.1rem;
-  margin-bottom: 8px;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .landing-header .tagline {
   margin: 0;
   color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 620px;
 }
 
 .landing-body {
@@ -24,46 +28,69 @@
 
 .card {
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 16px 18px;
+  border-radius: 10px;
+  padding: 20px 22px;
   background: var(--bg);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
 }
 
 .card h2 {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
 }
 
 .card ul {
   padding-left: 20px;
   margin: 0;
+  line-height: 1.7;
 }
 
 .landing-actions {
-  margin-top: 32px;
+  margin-top: 36px;
 }
 
 .primary-button {
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 11px 24px;
   border-radius: 6px;
   border: 1px solid var(--accent-border);
   background: var(--accent-bg);
   color: var(--text-h);
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-.primary-button:hover {
+.primary-button:hover:not(:disabled) {
   box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .landing-footer {
-  margin-top: 32px;
+  margin-top: 40px;
   border-top: 1px solid var(--border);
-  padding-top: 16px;
+  padding-top: 18px;
 }
 
 .safety-note {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text);
 }
+
 

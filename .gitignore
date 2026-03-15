@@ -1,0 +1,66 @@
+# --- Secrets / environment ---
+.env
+.env.*
+!.env.example
+
+# --- Python (backend) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+build/
+site/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- Node / frontend ---
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+frontend/dist-ssr/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Logs / runtime artifacts ---
+logs/
+*.log
+*.pid
+*.pid.lock
+*.out
+*.err
+
+# --- Editors / OS ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# --- Misc local artifacts ---
+test_out.txt
+*.local

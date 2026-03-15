@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "domain": "VA disability claims",
+    "version": "0.1.0",
+    "description": "Placeholder sample cases for VA disability claims copilot MVP."
+  },
+  "cases": [
+    {
+      "id": "initial_claim_example_1",
+      "route": "initial_claim",
+      "title": "New claim for PTSD and tinnitus",
+      "summary": "Veteran filing an initial claim for PTSD and tinnitus based on recent diagnosis.",
+      "notes": "Placeholder only, no real PII."
+    },
+    {
+      "id": "supplemental_claim_example_1",
+      "route": "supplemental_claim",
+      "title": "New evidence for denied back condition",
+      "summary": "Veteran submitting a supplemental claim with new medical evidence.",
+      "notes": "Placeholder only, no real PII."
+    },
+    {
+      "id": "hlr_example_1",
+      "route": "hlr",
+      "title": "Disagreement with rating decision",
+      "summary": "Veteran requests Higher-Level Review of a recent rating decision.",
+      "notes": "Placeholder only, no real PII."
+    },
+    {
+      "id": "board_explainer_example_1",
+      "route": "board_explainer",
+      "title": "Explaining options for appeal to the Board",
+      "summary": "Veteran wants to understand the difference between Board dockets.",
+      "notes": "Placeholder only, no real PII."
+    },
+    {
+      "id": "unclear_example_1",
+      "route": "unclear",
+      "title": "User intent unclear",
+      "summary": "User provides ambiguous information that does not clearly map to a specific lane.",
+      "notes": "Used to test routing fallback logic."
+    }
+  ]
+}

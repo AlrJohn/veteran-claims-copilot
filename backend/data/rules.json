@@ -1,0 +1,528 @@
+[
+  {
+    "rule_id": "RULE_IC_001",
+    "topic": "Main form for new disability compensation claim",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User is starting a new VA disability compensation claim",
+      "User asks which main form to use for a new disability compensation claim"
+    ],
+    "official_rule": "Use VA Form 21-526EZ when applying for VA disability compensation and related benefits.",
+    "copilot_action": "When the user is preparing a new disability compensation claim, surface VA Form 21-526EZ as the primary form used by VA for these claims.",
+    "warning": "Do not imply that VA Form 21-526EZ is the only form the user may ever need; keep language tied to how VA describes the form.",
+    "source_title": "About VA Form 21-526EZ",
+    "source_url": "https://www.va.gov/forms/21-526ez/",
+    "source_excerpt": "Use VA Form 21-526EZ when applying for VA disability compensation and related benefits."
+  },
+  {
+    "rule_id": "RULE_IC_002",
+    "topic": "Core evidence categories for disability claims",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User asks what evidence is generally needed for an initial disability claim",
+      "User is assembling documents before filing an initial claim"
+    ],
+    "official_rule": "VA says claimants need to submit or give VA permission to gather their DD214 or other separation documents, service treatment records, and any medical evidence related to the illness or injury.",
+    "copilot_action": "When building an initial-claim checklist, organize it around DD214 or other separation documents, service treatment records, and medical evidence related to the claimed illness or injury.",
+    "warning": "",
+    "source_title": "Evidence Needed For Your Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "source_excerpt": "You’ll need to submit or give us permission to gather these: your DD214 or other separation documents, your service treatment records, and any medical evidence related to your illness or injury."
+  },
+  {
+    "rule_id": "RULE_IC_003",
+    "topic": "Lay evidence is allowed for disability claims",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User says they do not have complete medical records but have people who can describe what happened or how symptoms affect them",
+      "User asks if statements from family, friends, or coworkers can be used in a claim"
+    ],
+    "official_rule": "VA says claimants can also submit lay evidence to support a disability claim, and that anyone can provide lay evidence.",
+    "copilot_action": "When a user lacks some records or wants to add context, explain that VA allows lay evidence and ask whether the user or someone who knows about the condition or related events could provide a statement.",
+    "warning": "",
+    "source_title": "Evidence Needed For Your Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "source_excerpt": "You can also submit lay evidence to support your claim. Lay evidence is written testimony by you or someone who knows about your condition or related events. Anyone can provide lay evidence."
+  },
+  {
+    "rule_id": "RULE_IC_004",
+    "topic": "Original-claim evidence elements for service-related conditions",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User is filing an original claim related to active-duty service",
+      "User asks what the basic pieces are for proving a service-related disability"
+    ],
+    "official_rule": "For an original disability claim related to active-duty service, VA says the claimant needs medical or lay evidence showing a current physical or mental disability, an in-service event, injury, or disease, and a link between the current condition and what happened during service.",
+    "copilot_action": "Organize the initial-claim checklist around three buckets: current disability, in-service event/injury/disease, and the link between the current condition and service.",
+    "warning": "",
+    "source_title": "Evidence Needed For Your Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "source_excerpt": "If you’re filing a disability claim for a condition related to your active duty service, you’ll need to submit medical or lay evidence that these are true: you have a current physical or mental disability, you experienced an event, got injured, or became infected with a disease during your active-duty service, and there’s a link between your current condition and the event, injury, or disease that happened during your service."
+  },
+  {
+    "rule_id": "RULE_IC_005",
+    "topic": "Evidence at filing is encouraged but not always required",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User is worried they cannot file because they do not yet have all their evidence",
+      "User asks if they must upload documents before submitting the claim"
+    ],
+    "official_rule": "VA says a claimant does not have to submit evidence with the claim, but VA may need to schedule a claim exam if more information is needed.",
+    "copilot_action": "Allow users to move forward with filing an initial claim even if they do not have every document yet, while explaining that VA may schedule an exam if more information is needed.",
+    "warning": "",
+    "source_title": "How To File A VA Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/",
+    "source_excerpt": "You don’t have to submit any evidence to support your claim. But we may need to schedule a claim exam so we can learn more about your condition."
+  },
+  {
+    "rule_id": "RULE_IC_006",
+    "topic": "One-year evidence window after VA receives the claim",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User asks how long they have to submit evidence after filing an initial claim",
+      "User is planning to file now and gather more records later"
+    ],
+    "official_rule": "VA says a claimant has up to 1 year from the date VA receives the claim to turn in evidence.",
+    "copilot_action": "Explain that VA allows up to one year from the date VA receives the claim for submitting evidence, so users can distinguish between filing now and continuing to gather documents.",
+    "warning": "",
+    "source_title": "How To File A VA Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/",
+    "source_excerpt": "You have up to a year from the date we receive your claim to turn in any evidence."
+  },
+  {
+    "rule_id": "RULE_IC_007",
+    "topic": "Online application start-date protection",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User is starting or has started a disability application online",
+      "User asks whether starting online affects their claim date"
+    ],
+    "official_rule": "VA says that if a claimant starts the disability application online and finishes it within 365 days, VA recognizes the date the application was started as the date of claim.",
+    "copilot_action": "When the user is using the online disability application, explain that if they finish within 365 days, VA treats the start date as the date of claim.",
+    "warning": "",
+    "source_title": "How To File A VA Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/",
+    "source_excerpt": "We’ll recognize the date you started your application as your date of claim as long as you complete it within 365 days."
+  },
+  {
+    "rule_id": "RULE_IC_008",
+    "topic": "Intent to file for paper-based workflows",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User plans to file a disability claim by mail or in person",
+      "User is not ready to file a complete paper claim but is concerned about protecting a potential effective date"
+    ],
+    "official_rule": "VA says a paper filer may want to submit an intent to file first to preserve a potential effective date, and after notifying VA of the intent to file, the claimant has 1 year to complete and file the claim.",
+    "copilot_action": "When a user plans to file by paper and is not ready to submit the full claim, mention VA’s intent-to-file option and the one-year window to complete the claim.",
+    "warning": "",
+    "source_title": "How To File A VA Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/",
+    "source_excerpt": "If you plan to file for disability compensation using a paper form, you may want to submit an intent to file form first... When you notify us of your intent to file, you may be able to get retroactive payments."
+  },
+  {
+    "rule_id": "RULE_IC_009",
+    "topic": "No separate intent-to-file needed for online disability filing",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User is filing an online disability claim and asks whether they also need to submit an intent to file",
+      "User is confused about whether the online process already protects their date of claim"
+    ],
+    "official_rule": "VA says that if the claimant files for disability compensation online, they do not need to notify VA of intent to file separately because the effective date is set automatically when they start the online form.",
+    "copilot_action": "When the user is filing disability compensation online, explain that starting the online application already sets the effective date, so a separate intent-to-file is not required for that online workflow.",
+    "warning": "",
+    "source_title": "How To File A VA Disability Claim",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/",
+    "source_excerpt": "If you file for disability compensation online, then you don’t need to notify us of your intent to file. This is because your effective date gets set automatically when you start filling out the form online—before you submit it."
+  },
+  {
+    "rule_id": "RULE_IC_010",
+    "topic": "Upload timing and 30-day early-decision caveat for initial claims",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User asks how long they can keep uploading evidence for an initial disability claim",
+      "User wonders if waiting to upload evidence could affect when VA decides the claim"
+    ],
+    "official_rule": "VA says a claimant can continue uploading evidence for an initial disability claim for up to 1 year after VA receives the claim, but if the claimant does not provide evidence or enough information for VA to help get evidence within 30 days, VA may decide the claim earlier.",
+    "copilot_action": "Explain that users can continue uploading evidence for up to one year after VA receives the initial claim, but if VA does not get evidence or enough information within about 30 days, VA may make a decision sooner based on what it has.",
+    "warning": "",
+    "source_title": "Upload Evidence To Support Your Disability Claim",
+    "source_url": "https://www.va.gov/disability/upload-supporting-evidence/",
+    "source_excerpt": "You can upload evidence for an initial disability claim for up to 1 year after we receive your claim, but if you don’t provide evidence or enough information for us to help get evidence within 30 days, we may decide your claim earlier."
+  },
+  {
+    "rule_id": "RULE_IC_011",
+    "topic": "C&P exam and ACE process",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User asks whether they will have a claim exam (C&P exam)",
+      "User mentions that VA used records without scheduling an exam"
+    ],
+    "official_rule": "VA says a claim exam may be required if VA needs more information, and if there is enough medical evidence already in the file, VA may use the ACE process instead of asking for an exam.",
+    "copilot_action": "Explain that some claims require a claim exam when VA needs more information, and in other cases VA may be able to decide the claim using existing medical evidence through the ACE process.",
+    "warning": "",
+    "source_title": "VA Claim Exam (C&P Exam)",
+    "source_url": "https://www.va.gov/resources/va-claim-exam/",
+    "source_excerpt": "We’ll ask you to have a claim exam only if we need more information to decide your claim. If you have enough medical evidence in your file to support your claim, we’ll follow the Acceptable Clinical Evidence (ACE) process."
+  },
+  {
+    "rule_id": "RULE_IC_012",
+    "topic": "Fully Developed Claim option for disability claims",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User says they have gathered all available evidence and are ready to file",
+      "User asks about submitting a fully developed claim"
+    ],
+    "official_rule": "VA says a claim can be treated as a Fully Developed Claim if the claimant submits the completed VA Form 21-526EZ, all supporting evidence they have, certifies there is no more evidence VA may need, and attends any exams VA schedules.",
+    "copilot_action": "When the user indicates they have gathered available evidence, mention the Fully Developed Claim option and that it involves submitting a completed 21-526EZ, all supporting evidence they have, certifying there is no more evidence, and attending any scheduled exams.",
+    "warning": "",
+    "source_title": "Fully Developed Claims Program",
+    "source_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/fully-developed-claims/",
+    "source_excerpt": "A claim can be treated as a Fully Developed Claim if you submit a completed 21-526EZ, all supporting evidence you have, certify there is no more evidence we may need, and attend any exams we schedule."
+  },
+  {
+    "rule_id": "RULE_DR_001",
+    "topic": "Three core decision review options",
+    "route": "board_explainer",
+    "trigger_signals": [
+      "User disagrees with a VA benefits decision and asks what review options exist",
+      "User wants a high-level explanation of Supplemental Claim, Higher-Level Review, and Board Appeal"
+    ],
+    "official_rule": "VA says that if a claimant disagrees with a VA benefit decision, they can choose from Supplemental Claim, Higher-Level Review, or Board Appeal.",
+    "copilot_action": "When the user disagrees with a decision, explain that VA lists three main decision review options: Supplemental Claim, Higher-Level Review, and Board Appeal, and use these as the core lanes the MVP describes.",
+    "warning": "",
+    "source_title": "Choosing A Decision Review Option",
+    "source_url": "https://www.va.gov/resources/choosing-a-decision-review-option/",
+    "source_excerpt": "If you disagree with a VA benefit decision, you can choose from 3 decision review options to continue your case: a Supplemental Claim, a Higher-Level Review, or a Board Appeal."
+  },
+  {
+    "rule_id": "RULE_DR_002",
+    "topic": "When to use the Supplemental Claim lane",
+    "route": "supplemental_claim",
+    "trigger_signals": [
+      "User has a prior decision and now has new and relevant evidence VA did not consider before",
+      "User mentions new medical reports, new test results, or new buddy statements related to the decided issue"
+    ],
+    "official_rule": "VA says a claimant can file a Supplemental Claim to add new evidence that’s relevant to the case or identify new evidence for review.",
+    "copilot_action": "When the user has a prior decision and now has new and relevant evidence, explain that VA describes Supplemental Claim as the option for adding relevant new evidence or identifying new evidence for review.",
+    "warning": "",
+    "source_title": "Supplemental Claims",
+    "source_url": "https://www.va.gov/decision-reviews/supplemental-claim/",
+    "source_excerpt": "If you disagree with our decision on your claim, you can file a Supplemental Claim to add new evidence that’s relevant to your case or identify new evidence for review."
+  },
+  {
+    "rule_id": "RULE_DR_003",
+    "topic": "Definition of new and relevant evidence for Supplemental Claims",
+    "route": "supplemental_claim",
+    "trigger_signals": [
+      "User asks what counts as new and relevant evidence for a Supplemental Claim",
+      "User is unsure whether their documents are new or relevant under VA’s definition"
+    ],
+    "official_rule": "VA defines new evidence as information VA has not considered before, and relevant evidence as information that proves or disproves something in the claim.",
+    "copilot_action": "When explaining Supplemental Claims, use VA’s definitions of new and relevant evidence and help the user compare their information to those definitions without adding extra criteria.",
+    "warning": "",
+    "source_title": "Supplemental Claims",
+    "source_url": "https://www.va.gov/decision-reviews/supplemental-claim/",
+    "source_excerpt": "New evidence is information we haven’t considered before. Relevant evidence is information that proves or disproves something in your claim."
+  },
+  {
+    "rule_id": "RULE_DR_004",
+    "topic": "Supplemental Claim is not for conditions that simply got worse",
+    "route": "supplemental_claim",
+    "trigger_signals": [
+      "User says a service-connected condition has gotten worse and asks whether to file a Supplemental Claim",
+      "User focuses on an increase in severity of an already service-connected condition rather than new evidence"
+    ],
+    "official_rule": "VA says that if a service-connected condition has gotten worse, the claimant should file for increased disability compensation, not a Supplemental Claim.",
+    "copilot_action": "When the user only reports that a service-connected condition has gotten worse, explain that VA directs claimants to file for increased disability compensation rather than using the Supplemental Claim lane for that situation.",
+    "warning": "Do not steer worsening-condition-only cases toward Supplemental Claim when VA says the path is to file for increased disability compensation.",
+    "source_title": "Supplemental Claims",
+    "source_url": "https://www.va.gov/decision-reviews/supplemental-claim/",
+    "source_excerpt": "If your service-connected condition has gotten worse, you should file for increased disability compensation, not a Supplemental Claim."
+  },
+  {
+    "rule_id": "RULE_DR_005",
+    "topic": "When to use the Higher-Level Review lane",
+    "route": "hlr",
+    "trigger_signals": [
+      "User believes there is an error in the decision and has no new evidence to submit",
+      "User says VA missed or misapplied information that was already in the record"
+    ],
+    "official_rule": "VA says a claimant should request Higher-Level Review if they believe there is an error in the decision and they do not have new evidence.",
+    "copilot_action": "When the user believes the decision is wrong based on the existing record and they do not have new evidence, explain that VA describes Higher-Level Review as the option that uses the same evidence with a new reviewer.",
+    "warning": "",
+    "source_title": "Choosing A Decision Review Option",
+    "source_url": "https://www.va.gov/resources/choosing-a-decision-review-option/",
+    "source_excerpt": "Request a Higher-Level Review if you believe there’s an error with the decision on your claim... A higher-level reviewer will review the decision. This reviewer will consider the same evidence as before. They can’t consider any new evidence."
+  },
+  {
+    "rule_id": "RULE_DR_006",
+    "topic": "No new evidence allowed in Higher-Level Review",
+    "route": "hlr",
+    "trigger_signals": [
+      "User is considering Higher-Level Review but wants to submit new evidence with it",
+      "User asks if they can add documents during a Higher-Level Review"
+    ],
+    "official_rule": "VA says a Higher-Level Review uses the same evidence as before and the reviewer cannot consider new evidence.",
+    "copilot_action": "If the user plans to submit new evidence, warn that VA’s Higher-Level Review process is based on the existing record and that new evidence is not considered in that lane.",
+    "warning": "Do not describe Higher-Level Review as a path for submitting new evidence; VA says new evidence is not considered in this lane.",
+    "source_title": "Choosing A Decision Review Option",
+    "source_url": "https://www.va.gov/resources/choosing-a-decision-review-option/",
+    "source_excerpt": "A higher-level reviewer will review the decision. This reviewer will consider the same evidence as before. They can’t consider any new evidence."
+  },
+  {
+    "rule_id": "RULE_DR_007",
+    "topic": "Higher-Level Review timing and basic eligibility",
+    "route": "hlr",
+    "trigger_signals": [
+      "User asks how long they have to request a Higher-Level Review after a decision",
+      "User wonders whether they can request HLR for an older decision",
+      "User mentions a contested claim"
+    ],
+    "official_rule": "VA says Higher-Level Review generally must be requested within 1 year of the decision on the initial claim or Supplemental Claim, the claimant must not have new evidence, and the claim must not be a contested claim.",
+    "copilot_action": "When discussing HLR, remind users that VA describes a general one-year deadline from the decision date, that HLR is for cases without new evidence, and that contested claims have additional limits.",
+    "warning": "",
+    "source_title": "Higher-Level Reviews",
+    "source_url": "https://www.va.gov/decision-reviews/higher-level-review/",
+    "source_excerpt": "You’re requesting a Higher-Level Review within 1 year of our decision on your initial claim or Supplemental Claim... and you don’t have new evidence to submit, and your claim isn’t a contested claim."
+  },
+  {
+    "rule_id": "RULE_DR_008",
+    "topic": "Higher-Level Review informal conference is optional and may affect timing",
+    "route": "hlr",
+    "trigger_signals": [
+      "User asks about talking with the higher-level reviewer",
+      "User asks whether they must request an informal conference as part of HLR"
+    ],
+    "official_rule": "VA says a claimant may request an optional, one-time informal conference with the higher-level reviewer to identify specific errors, and this may delay the review.",
+    "copilot_action": "When the user is considering an informal conference, clarify that VA describes it as optional and notes that it may affect how long the review takes.",
+    "warning": "",
+    "source_title": "Choosing A Decision Review Option",
+    "source_url": "https://www.va.gov/resources/choosing-a-decision-review-option/",
+    "source_excerpt": "You can request an optional, one-time, informal conference with a higher-level reviewer to identify specific errors in the case. If you request an informal conference, this may delay the review."
+  },
+  {
+    "rule_id": "RULE_DR_009",
+    "topic": "Higher-Level Review duty-to-assist outcome",
+    "route": "hlr",
+    "trigger_signals": [
+      "User asks what can happen after they request a Higher-Level Review",
+      "User wants to know whether VA can correct certain errors during HLR"
+    ],
+    "official_rule": "VA says that if it finds a duty-to-assist error during a Higher-Level Review, it will close the review and open a new claim to gather the missing evidence, then decide the case based on the new evidence.",
+    "copilot_action": "When explaining Higher-Level Review outcomes, describe that VA may find a duty-to-assist error, close the Higher-Level Review, open a new claim to gather the missing evidence, and then decide the case based on that new evidence.",
+    "warning": "Do not predict that a duty-to-assist error will be found; only explain what VA says happens if one is found.",
+    "source_title": "VA’s Duty To Assist",
+    "source_url": "https://www.va.gov/resources/vas-duty-to-assist/",
+    "source_excerpt": "If we find an error during a Higher-Level Review, we’ll close the review and open a new claim to gather the missing evidence... Then we’ll help you get the missing evidence, and decide your case based on this new evidence."
+  },
+  {
+    "rule_id": "RULE_DR_010",
+    "topic": "Board Appeal eligibility and high-level timing",
+    "route": "board_explainer",
+    "trigger_signals": [
+      "User asks when they can request a Board Appeal after a decision",
+      "User asks about deadlines for Board Appeals or mentions a contested claim"
+    ],
+    "official_rule": "VA says a Board Appeal may be requested within 1 year of the decision on an initial claim, Supplemental Claim, or Higher-Level Review. A claimant can’t request 2 Board Appeals in a row for the same claim. For contested claims, the Board Appeal deadline is 60 days.",
+    "copilot_action": "When describing Board Appeals, mention VA’s general one-year deadline from the decision date, the rule against requesting two Board Appeals in a row on the same claim, and the shorter deadline for contested claims.",
+    "warning": "",
+    "source_title": "Board Appeals",
+    "source_url": "https://www.va.gov/decision-reviews/board-appeal/",
+    "source_excerpt": "A Board Appeal may be an option for you if you submit your request within 1 year of the decision on your initial claim, Supplemental Claim, or Higher-Level Review... You can’t request 2 Board Appeals in a row for the same claim. Exception: ... for a contested claim ... you must request a Board Appeal within 60 days."
+  },
+  {
+    "rule_id": "RULE_DR_011",
+    "topic": "Board Appeal lanes and evidence windows",
+    "route": "board_explainer",
+    "trigger_signals": [
+      "User asks about the difference between Board Appeal options or dockets",
+      "User asks when they can submit evidence for a Board Appeal"
+    ],
+    "official_rule": "VA says Board Appeals have three lanes: Direct Review, Evidence Submission, and Hearing. Direct Review does not involve new evidence or a hearing. Evidence Submission allows additional evidence without a hearing. Hearing allows a hearing with a Veterans Law Judge and new evidence at the hearing or within 90 days after the hearing.",
+    "copilot_action": "When the user wants a high-level explanation of Board Appeal options, describe the three lanes and the basic evidence windows that VA lists for each.",
+    "warning": "Do not tell the user which Board lane to choose; simply repeat how VA describes the options.",
+    "source_title": "Choosing A Decision Review Option",
+    "source_url": "https://www.va.gov/resources/choosing-a-decision-review-option/",
+    "source_excerpt": "Direct Review, if you don’t want to submit evidence or have a hearing; Evidence Submission, if you want to submit additional evidence without a hearing; Hearing, if you want to have a hearing with a Veterans Law Judge (with or without new evidence)."
+  },
+  {
+    "rule_id": "RULE_DR_012",
+    "topic": "Decision review deadline and evidence summary",
+    "route": "unclear",
+    "trigger_signals": [
+      "User wants an overview of deadlines for Supplemental Claims, HLR, and Board Appeals",
+      "User asks which lanes accept new evidence and which do not"
+    ],
+    "official_rule": "VA says that for most benefits, the claimant has 1 year from the date on the decision letter to request Higher-Level Review or Board Appeal. A Supplemental Claim can be filed at any time, but VA recommends filing within 1 year to keep the effective date. VA also says new evidence can be submitted with a Supplemental Claim and with certain Board lanes, but not with Higher-Level Review or Board Direct Review.",
+    "copilot_action": "When a user wants a high-level comparison of review choices, summarize VA’s general timing rules and which lanes do or do not accept new evidence.",
+    "warning": "",
+    "source_title": "Decision Reviews FAQs",
+    "source_url": "https://www.va.gov/resources/decision-reviews-faqs/",
+    "source_excerpt": "For most VA benefits, you have 1 year from the date on your decision letter to request a Higher-Level Review or a Board Appeal. You can file a Supplemental Claim at any time, but we recommend that you file within 1 year from the date on your decision letter to keep your effective date... You can submit new evidence with a Supplemental Claim and with Board Appeal—evidence submission type and Board Appeal—hearing type. You can’t submit new evidence with a Higher-Level Review, or with a Board Appeal if you select the direct review type."
+  },
+  {
+    "rule_id": "RULE_DR_013",
+    "topic": "What happens while waiting on a decision review",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks what they should expect after requesting a review",
+      "User wonders if they should request another review while one is in progress"
+    ],
+    "official_rule": "VA says that after requesting a decision review, the claimant generally does not need to do anything unless VA asks for more information or schedules exams, and that claimants should not request another review while waiting.",
+    "copilot_action": "When a user has already requested a decision review, explain that VA indicates they usually do not need to take further action unless VA contacts them, and that requesting another review while one is still in progress is not what VA describes.",
+    "warning": "",
+    "source_title": "After You Request A Decision Review",
+    "source_url": "https://www.va.gov/decision-reviews/after-you-request-review/",
+    "source_excerpt": "You don’t need to do anything unless we send you a letter asking for more information. If we schedule any exams for you, be sure not to miss them. If you requested a decision review and haven’t heard back from us yet, please don’t request another review."
+  },
+  {
+    "rule_id": "RULE_DR_014",
+    "topic": "Switching review options and limits on repeated reviews",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks if they can switch from one review option to another",
+      "User asks if they can request another HLR or Board Appeal after one has already been completed on the same claim"
+    ],
+    "official_rule": "VA says a claimant may be able to switch review options if certain conditions are met, and that if VA already completed a Higher-Level Review for the case, the claimant can’t request another HLR, and if VA already completed a Board Appeal, the claimant can’t request another Board Appeal.",
+    "copilot_action": "When a user talks about switching options or repeating the same review type, mention VA’s guidance that switching may be possible in some cases and that VA does not allow multiple completed HLRs or multiple completed Board Appeals in a row on the same claim.",
+    "warning": "",
+    "source_title": "After You Request A Decision Review",
+    "source_url": "https://www.va.gov/decision-reviews/after-you-request-review/",
+    "source_excerpt": "You may be able to switch your request to a different option... If we already completed a Higher-Level Review for your case, you can’t request another Higher-Level Review. And if we already completed a Board Appeal for your case, you can’t request another Board Appeal."
+  },
+  {
+    "rule_id": "RULE_ST_001",
+    "topic": "VA status tool covers claims, reviews, and appeals",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks where to check the status of a claim, decision review, or appeal",
+      "User wants to know what information the VA status tool shows"
+    ],
+    "official_rule": "VA says the status tool can show where a claim, decision review, or appeal is in the review process, along with type and related details.",
+    "copilot_action": "When the user asks about status, point to VA’s online status tool as a place to see where a claim, review, or appeal is in the process and to view certain details.",
+    "warning": "",
+    "source_title": "Check Your VA Claim, Decision Review, Or Appeal Status",
+    "source_url": "https://www.va.gov/claim-or-appeal-status",
+    "source_excerpt": "You can find out where your claim, decision review, or appeal is in our review process."
+  },
+  {
+    "rule_id": "RULE_ST_002",
+    "topic": "Status tool uploads only for initial claims",
+    "route": "initial_claim",
+    "trigger_signals": [
+      "User asks where to upload evidence for an initial disability claim",
+      "User asks whether they can upload evidence for a decision review or appeal using the status tool"
+    ],
+    "official_rule": "VA says the status tool lets users upload evidence for an initial claim, but cannot be used to upload evidence for a decision review or appeal.",
+    "copilot_action": "When the user is handling an initial disability claim, you can mention that the status tool supports uploading evidence for that claim, and when the user is working on a decision review or appeal, clarify that VA says the status tool is not used to upload evidence for those reviews.",
+    "warning": "Do not direct users to upload evidence for a decision review or appeal through the status tool when VA says that tool is for initial-claim uploads only.",
+    "source_title": "Check Your VA Claim, Decision Review, Or Appeal Status",
+    "source_url": "https://www.va.gov/claim-or-appeal-status",
+    "source_excerpt": "Upload evidence for an initial claim (you can’t use this tool to upload evidence for a decision review or an appeal)."
+  },
+  {
+    "rule_id": "RULE_ST_003",
+    "topic": "Downloading decision letters from the status tool",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks how to get a copy of a VA decision letter",
+      "User wants to upload a decision letter to the copilot for organization or explanation"
+    ],
+    "official_rule": "VA says users can download decision letters for certain types of claims, decision reviews, and appeals from the status tool.",
+    "copilot_action": "When the user needs a decision letter, mention that VA’s status tool can provide downloadable decision letters for certain types of claims, reviews, and appeals, which they can then use in the app if needed.",
+    "warning": "",
+    "source_title": "Check Your VA Claim, Decision Review, Or Appeal Status",
+    "source_url": "https://www.va.gov/claim-or-appeal-status",
+    "source_excerpt": "Download decision letters for certain types of claims, decision reviews, and appeals."
+  },
+  {
+    "rule_id": "RULE_ST_004",
+    "topic": "Some evidence may not appear online in VA tools",
+    "route": "unclear",
+    "trigger_signals": [
+      "User is concerned that a document does not appear in their online VA records",
+      "User asks whether a missing document online means VA never received it"
+    ],
+    "official_rule": "VA says documents sent by mail or fax, brought in person, or restricted for privacy reasons may not appear online.",
+    "copilot_action": "When a user cannot see a document online, explain that VA notes some mailed, faxed, in-person, or restricted documents may not show up in online tools, so online absence does not by itself prove VA never received them.",
+    "warning": "",
+    "source_title": "Check Your VA Claim, Decision Review, Or Appeal Status",
+    "source_url": "https://www.va.gov/claim-or-appeal-status",
+    "source_excerpt": "We won’t list these types of documents: documents you sent to us by mail or fax, documents you brought to us in person, or documents we’ve restricted to protect your or someone else’s privacy."
+  },
+  {
+    "rule_id": "RULE_SAFE_001",
+    "topic": "Accredited representatives can help file claims and request reviews",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks who can help them file a claim or request a decision review",
+      "User is dealing with a complex situation and wants human help"
+    ],
+    "official_rule": "VA says an accredited attorney, claims agent, or VSO representative can help a claimant file a claim or request a decision review.",
+    "copilot_action": "When a case is complex or the user wants additional help, mention that VA lists accredited attorneys, claims agents, and VSO representatives as people who can help file claims or request decision reviews.",
+    "warning": "",
+    "source_title": "Get Help From A VA Accredited Representative Or VSO",
+    "source_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "source_excerpt": "An accredited attorney, claims agent, or VSO representative can help you file a claim or request a decision review."
+  },
+  {
+    "rule_id": "RULE_SAFE_002",
+    "topic": "VSO services on VA benefit claims are free",
+    "route": "unclear",
+    "trigger_signals": [
+      "User is worried about paying someone to help with a VA benefit claim",
+      "User asks whether VSO help costs money"
+    ],
+    "official_rule": "VA says the services an accredited VSO representative provides on VA benefit claims are always free.",
+    "copilot_action": "When suggesting that the user consider a VSO for help, mention VA’s statement that accredited VSO services on VA benefit claims are free.",
+    "warning": "",
+    "source_title": "Get Help From A VA Accredited Representative Or VSO",
+    "source_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "source_excerpt": "The services an accredited VSO representative provides on your VA benefit claims are always free."
+  },
+  {
+    "rule_id": "RULE_SAFE_003",
+    "topic": "Appointment forms for representatives",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks how to formally appoint a representative",
+      "User wants to know which form is used to appoint a VSO versus an attorney or claims agent"
+    ],
+    "official_rule": "VA says claimants appoint a VSO representative with VA Form 21-22 and appoint an accredited attorney or claims agent with VA Form 21-22a.",
+    "copilot_action": "When the user is asking about appointing representation, mention VA’s description that VA Form 21-22 is used for VSOs and VA Form 21-22a is used for accredited attorneys or claims agents.",
+    "warning": "",
+    "source_title": "Get Help From A VA Accredited Representative Or VSO",
+    "source_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "source_excerpt": "If you’re appointing an accredited VSO representative, fill out ... VA Form 21-22. If you’re appointing an accredited attorney or claims agent, fill out ... VA Form 21-22a."
+  },
+  {
+    "rule_id": "RULE_SAFE_004",
+    "topic": "Accreditation is required to assist in preparation, presentation, and prosecution of claims",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks whether someone without VA accreditation can help them prepare or present a claim",
+      "User asks what accreditation means in the VA context"
+    ],
+    "official_rule": "VA’s Office of General Counsel says accreditation is required to assist claimants in the preparation, presentation, and prosecution of claims for benefits, and without accreditation an individual may not independently assist claimants in those activities.",
+    "copilot_action": "When describing what the copilot can and cannot do, and when the user is considering help from others, explain VA’s statement that only accredited individuals are authorized to assist with preparing, presenting, and prosecuting VA benefit claims.",
+    "warning": "Do not present the copilot as a representative or as a substitute for an accredited individual.",
+    "source_title": "Office of General Counsel – Accreditation Frequently Asked Questions",
+    "source_url": "https://www.va.gov/ogc/accred_faqs.asp",
+    "source_excerpt": "Accreditation means the authority granted by VA to representatives, agents, and attorneys to assist claimants in the preparation, presentation, and prosecution of claims for VA benefits... Without accreditation, an individual may not independently assist claimants in the preparation, presentation, and prosecution of claims for VA benefits."
+  },
+  {
+    "rule_id": "RULE_SAFE_005",
+    "topic": "Avoid unauthorized claims assistance and confirm accreditation",
+    "route": "unclear",
+    "trigger_signals": [
+      "User asks how to avoid scams or unaccredited helpers",
+      "User is unsure whether a person or company offering help is legitimate"
+    ],
+    "official_rule": "VA warns users to confirm that any representative is accredited and says it is not legal for a company or person to prepare, present, or prosecute VA benefit claims without proper VA recognition.",
+    "copilot_action": "When the user is considering outside help, remind them that VA instructs claimants to confirm accreditation and warns that preparing, presenting, or prosecuting VA benefit claims without proper VA recognition is not legal.",
+    "warning": "",
+    "source_title": "How To Protect Your Identity And Your VA Benefits From Scammers",
+    "source_url": "https://www.va.gov/resources/how-to-protect-your-identity-and-your-va-benefits-from-scammers/",
+    "source_excerpt": "Confirm that any representative you work with is accredited by us. It’s not legal for a company or person to prepare, present, or prosecute VA benefit claims without the proper VA recognition."
+  }
+]

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import { AppHeader } from './components/AppHeader'
+import { ErrorBoundary } from './components/ErrorBoundary'
 import { LandingPage } from './pages/LandingPage'
 import { IntakePage } from './pages/IntakePage'
 import { FollowUpPage } from './pages/FollowUpPage'
@@ -74,55 +76,58 @@ function App() {
 
   return (
     <div className="app-shell">
-      {view === 'landing' && (
-        <LandingPage
-          onStart={() => {
-            setSessionState(emptySessionState)
-            setView('intake')
-          }}
-        />
-      )}
-      {view === 'intake' && (
-        <IntakePage
-          sessionState={sessionState}
-          onBack={() => setView('landing')}
-          onAnalyzeSuccess={(newState: SessionState, res: AnalyzeResponse) => {
-            setSessionState(newState)
-            setLastResponse(res)
-            if (res.needs_follow_up) {
-              setView('followup')
-            } else {
-              setView('results')
-            }
-          }}
-        />
-      )}
-      {view === 'followup' && lastResponse && (
-        <FollowUpPage
-          sessionState={sessionState}
-          analyzeResponse={lastResponse}
-          onBack={() => setView('intake')}
-          onAnalyzeSuccess={(newState: SessionState, res: AnalyzeResponse) => {
-            setSessionState(newState)
-            setLastResponse(res)
-            if (res.needs_follow_up) {
-              setView('followup')
-            } else {
-              setView('results')
-            }
-          }}
-        />
-      )}
-      {view === 'results' && lastResponse?.final_packet && (
-        <ResultsPage
-          packet={lastResponse.final_packet}
-          onStartOver={() => {
-            setSessionState(emptySessionState)
-            setLastResponse(null)
-            setView('landing')
-          }}
-        />
-      )}
+      <AppHeader />
+      <ErrorBoundary>
+        {view === 'landing' && (
+          <LandingPage
+            onStart={() => {
+              setSessionState(emptySessionState)
+              setView('intake')
+            }}
+          />
+        )}
+        {view === 'intake' && (
+          <IntakePage
+            sessionState={sessionState}
+            onBack={() => setView('landing')}
+            onAnalyzeSuccess={(newState: SessionState, res: AnalyzeResponse) => {
+              setSessionState(newState)
+              setLastResponse(res)
+              if (res.needs_follow_up) {
+                setView('followup')
+              } else {
+                setView('results')
+              }
+            }}
+          />
+        )}
+        {view === 'followup' && lastResponse && (
+          <FollowUpPage
+            sessionState={sessionState}
+            analyzeResponse={lastResponse}
+            onBack={() => setView('intake')}
+            onAnalyzeSuccess={(newState: SessionState, res: AnalyzeResponse) => {
+              setSessionState(newState)
+              setLastResponse(res)
+              if (res.needs_follow_up) {
+                setView('followup')
+              } else {
+                setView('results')
+              }
+            }}
+          />
+        )}
+        {view === 'results' && lastResponse?.final_packet && (
+          <ResultsPage
+            packet={lastResponse.final_packet}
+            onStartOver={() => {
+              setSessionState(emptySessionState)
+              setLastResponse(null)
+              setView('landing')
+            }}
+          />
+        )}
+      </ErrorBoundary>
     </div>
   )
 }

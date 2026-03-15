@@ -10,8 +10,6 @@ class LLMClientError(RuntimeError):
     pass
 
 
-
-
 def _build_client() -> OpenAI:
     api_key = os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
     if not api_key:

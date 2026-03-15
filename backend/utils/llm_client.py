@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 load_dotenv()
 
-print("DEBUG BACKEND LLM_MODEL =", repr(os.getenv("LLM_MODEL")))
 
 class LLMClientError(RuntimeError):
     pass

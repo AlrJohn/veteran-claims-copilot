@@ -50,7 +50,7 @@
   border-radius: 10px;
   padding: 14px 16px;
   margin-bottom: 14px;
-  background: var(--surface, #fff);
+  background: var(--panel-bg);
 }
 
 .result-card h3 {
@@ -67,6 +67,7 @@
   border-radius: 10px;
   margin-top: 12px;
   padding: 8px 12px;
+  background: var(--surface);
 }
 
 .result-details > summary {
@@ -80,7 +81,7 @@
 }
 
 .result-details > summary::before {
-  content: '▸';
+  content: '>';
   display: inline-block;
   margin-right: 8px;
   transition: transform 0.15s ease;
@@ -99,6 +100,7 @@
   border-radius: 10px;
   padding: 16px 18px;
   align-self: start;
+  background: var(--panel-bg);
 }
 
 .results-sidebar h2 {
@@ -160,5 +162,6 @@
   font-size: 0.875rem;
   line-height: 1.6;
 }
+
 
 

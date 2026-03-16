@@ -33,7 +33,7 @@
   border: 1px solid var(--border);
   font-family: inherit;
   font-size: inherit;
-  background: var(--bg);
+  background: var(--surface);
   color: var(--text-h);
   box-sizing: border-box;
   transition: border-color 0.15s, box-shadow 0.15s;

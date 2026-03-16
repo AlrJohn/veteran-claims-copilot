@@ -122,7 +122,7 @@ export function IntakePage({ sessionState, onBack, onAnalyzeSuccess }: IntakePag
             {sampleCases.map((c) => (
               <li key={c.id}>
                 <button type="button" className="link-button" onClick={() => handleSampleClick(c)}>
-                  {c.title} <span className="route-tag">{c.route}</span>
+                  {c.title}
                 </button>
               </li>
             ))}

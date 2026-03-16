@@ -30,7 +30,7 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px 22px;
-  background: var(--bg);
+  background: var(--panel-bg);
   transition: box-shadow 0.2s;
 }
 

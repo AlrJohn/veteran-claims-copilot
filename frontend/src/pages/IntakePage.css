@@ -41,7 +41,7 @@
   border: 1px solid var(--border);
   font-family: inherit;
   font-size: inherit;
-  background: var(--bg);
+  background: var(--surface);
   color: var(--text-h);
   resize: vertical;
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -83,6 +83,7 @@
   font-size: inherit;
   text-decoration: none;
   transition: opacity 0.15s;
+  align-self: flex-start;
 }
 
 .link-button:hover {
@@ -105,7 +106,7 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 16px 18px;
-  background: var(--bg);
+  background: var(--panel-bg);
 }
 
 .intake-sidebar h2 {
@@ -132,6 +133,7 @@
 
 .intake-sidebar li + li {
   margin-top: 8px;
+  align-self: flex-start;
 }
 
 .route-tag {
